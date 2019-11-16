@@ -1,6 +1,9 @@
 # ArtGameSystem
 Art Game System Template
 
+# 변경사항
+ 브런치 용으로 변경함 2019-11-17 test
+
 # 추가된 외부 라이브러리
  * p5.play <http://molleindustria.github.io/p5.play/>
 

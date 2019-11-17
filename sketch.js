@@ -1,22 +1,22 @@
-let canvas;
-let canvasWidth = 600;
-let canvasHeight = 400;
+//Sprite creation
+//Click to create a new sprite with random speed
 
 function setup() {
-  canvas = createCanvas(canvasWidth, canvasHeight);
-  canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  noCursor();
+  createCanvas(800, 400);
 }
 
 function draw() {
   background(255, 255, 255);
 
- fill(0);
- textAlign(CENTER);
- text('Click to create a new sprite', width/2, height/2);
- //draw all the sprites added to the sketch so far
- //the positions will be updated automatically at every cycle
- drawSprites();
+  fill(255,0,0);
+  rect(20,20,100,400); //가상 벽임
+
+  fill(0);
+  textAlign(CENTER);
+  text('Click to create a new sprite', width/2, height/2);
+  //draw all the sprites added to the sketch so far
+  //the positions will be updated automatically at every cycle
+  drawSprites();
 }
 
 function mousePressed() {

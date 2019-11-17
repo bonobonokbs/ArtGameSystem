@@ -1,15 +1,17 @@
 //Sprite creation
 //Click to create a new sprite with random speed
+var box;
 
 function setup() {
   createCanvas(800, 400);
+  box = createSprite(100, 300);
+
 }
 
 function draw() {
   background(255, 255, 255);
 
   fill(255,0,0);
-  rect(20,20,100,400); //가상 벽임
 
   fill(0);
   textAlign(CENTER);

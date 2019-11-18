@@ -1,6 +1,6 @@
 //Sprite creation
 //Click to create a new sprite with random speed
-var box;
+var box, s;
 
 function setup() {
   createCanvas(800, 400);
@@ -16,16 +16,14 @@ function draw() {
   text('Click to create a new sprite', width/2, height/2);
   drawSprites();
 
-  if(box.collide(s)){
-      print("충돌됨");
-  }
+  box.collide(s);
 
 }
 
 function mousePressed() {
 
   //create a sprite at the mouse position and store it in a temporary variable
-  var s = createSprite(mouseX, mouseY, 30, 30);
+  s = createSprite(mouseX, mouseY, 30, 30);
   //if no image or animation is associated it will be a rectancle of the specified size
   //and a random color
 

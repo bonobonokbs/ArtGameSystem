@@ -10,8 +10,9 @@ function setup() {
 
   asterisk = createSprite(600, 200);
   asterisk.setCollider('circle', 0, 0, 64);
+  asterisk.mouseActive = true;
 
-
+}
 
 function draw() {
   background(255, 255, 255);
@@ -23,10 +24,10 @@ function draw() {
 
   //if a sprite is mouseActive true I can check if the mouse is over its collider
   //and if the button is pressed
-  if(ghost.mouseIsOver)
-    ghost.rotation-= 10;
+  if(asterisk.mouseIsOver)
 
-  ghost.visible = !ghost.mouseIsPressed;
+  asterisk.rotation-= 10;
+  //asterisk.visible = !ghost.mouseIsPressed;
 
   drawSprites();
 }

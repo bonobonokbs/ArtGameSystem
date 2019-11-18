@@ -29,7 +29,7 @@ function setup() {
 
   for(var j = 0; j<6; j++) {
     var newCloud = createSprite(random(0, width), random(0, height));
-    newCloud.addAnimation('floating', 'assets/cloud_pulsing0001.png', 'assets/cloud_pulsing0007.png');
+    //newCloud.addAnimation('floating', 'assets/cloud_pulsing0001.png', 'assets/cloud_pulsing0007.png');
     //set a rotation speed
     newCloud.rotationSpeed = -2;
     //another way to add a sprite to a group
@@ -48,15 +48,9 @@ function draw() {
     g.position.y += sin(frameCount/10);
   }
 
-  asterisk.position.x = mouseX;
-  asterisk.position.y = mouseY;
 
-  //instead of drawing all sprites with drawSprites();
-  //you can draw them selectively by group or single instance
-  //in the order you want
 
-  //e.g. even if the clouds should appear on the top of the ghosts
-  //I impose a rendering before the others sprites
+  
   drawSprites(clouds);
   drawSprites(ghosts);
   drawSprite(asterisk);

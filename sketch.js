@@ -49,7 +49,7 @@ function draw() {
     g.position.y += sin(frameCount/10);
   }
   //------------------
-  if(++count >= 255){
+  if(++count >= 800){
     count = 0;
   }
 

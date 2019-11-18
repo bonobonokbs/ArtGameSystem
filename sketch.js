@@ -4,6 +4,7 @@
 var clouds;
 var ghosts;
 var asterisk;
+let count = 0;
 
 function setup() {
   createCanvas(800, 400);
@@ -47,10 +48,20 @@ function draw() {
     //moving all the ghosts y following a sin function (sinusoid)
     g.position.y += sin(frameCount/10);
   }
+  //------------------
+  if(++count >= 255){
+    count = 0;
+  }
+
+  for(var i=0; i<ghosts.length; i++){
+      var g = ghosts[i];
+      g.position.x = count;
+
+  }
 
 
 
-  
+
   drawSprites(clouds);
   drawSprites(ghosts);
   drawSprite(asterisk);

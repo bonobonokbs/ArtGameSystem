@@ -10,10 +10,15 @@ let canvasHeight = 400;
 let cars = new Array(); //자동가 배열만듬
 
 class car {
-  constructor(car_num, car_point) { //생성자
 
-      for(let i=0; i<car_num; car_num++){
-            cars[i] = createSprite(0, height/i, 60, 30);
+  constructor(car_num, car_point) { //생성자
+      let i=0;
+
+      for(this.i=0; this.i<car_num; this.i++){
+        cars[i] = createSprite(0, height/i, 60, 30);
+        cars[i].setVelocity(random(3, 10), 0);
+        print("update!  " + this.i);
+
       }
   }
 }
@@ -25,7 +30,7 @@ function preload() {
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  //car = new car(2,2);
+   var carss = new car(2,2);
 
   noCursor();
 

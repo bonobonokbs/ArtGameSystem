@@ -7,6 +7,17 @@ let canvas;
 let canvasWidth = 400;
 let canvasHeight = 400;
 
+let cars = new Array(); //자동가 배열만듬
+
+class car {
+  constructor(car_num, car_point) { //생성자
+
+      for(let i=0; i<car_num; car_num++){
+            cars[i] = createSprite(0, height/i, 60, 30);
+      }
+  }
+}
+
 function preload() {
   sound_hit = loadSound('hit.wav'); // 경로 넣고 싶으면 'wave/hit.wav'
 }
@@ -14,6 +25,8 @@ function preload() {
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
+  //car = new car(2,2);
+
   noCursor();
 
 
@@ -55,7 +68,6 @@ function resetGame() {
   frog = createSprite(width/2, height-30, 20, 40);
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
-
   car1.setVelocity(random(3, 10), 0);
 }
 

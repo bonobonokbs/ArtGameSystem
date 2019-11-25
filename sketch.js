@@ -6,6 +6,7 @@ let sound_hit;
 let canvas;
 let canvasWidth = 400;
 let canvasHeight = 400;
+var carss;
 
 let cars = new Array(); //자동가 배열만듬
 
@@ -13,7 +14,7 @@ class car {
 
   constructor(car_num, car_point) { //생성자
       let i=0;
-      let car_max = car_num;
+  //    let car_max = car_num;
 
       for(this.i=0; this.i<car_num; this.i++){
         cars[i] = createSprite(0, height/2 - (this.i * 50), 60, 30);
@@ -23,7 +24,7 @@ class car {
       }
   }
   reflash(){
-    for(this.i=0; this.i<car_max; this.i++){
+    for(this.i=0; this.i<this.car_num; this.i++){
         if (cars[i].position.x >= width) {
           cars[i].position.x = 0;
           cars[i].setVelocity(random(3, 10), 0);
@@ -43,7 +44,7 @@ function preload() {
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-   var carss = new car(4,2);
+  carss = new car(4,2);
 
   noCursor();
 

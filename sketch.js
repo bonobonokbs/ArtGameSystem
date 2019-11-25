@@ -15,7 +15,7 @@ class car {
       let i=0;
 
       for(this.i=0; this.i<car_num; this.i++){
-        cars[i] = createSprite(0, height/i, 60, 30);
+        cars[i] = createSprite(0, height/2 - (this.i * 50), 60, 30);
         cars[i].setVelocity(random(3, 10), 0);
         print("update!  " + this.i);
 
@@ -30,7 +30,7 @@ function preload() {
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-   var carss = new car(2,2);
+   var carss = new car(4,2);
 
   noCursor();
 
